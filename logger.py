@@ -4,4 +4,7 @@ import logging
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.INFO)
 handler = logging.StreamHandler(stream=sys.stdout)
-LOGGER.addHandlerer(handler)
+LOGGER.addHandler(handler)
+
+
+# commit from master
