@@ -52,3 +52,4 @@ def create_user():
 @pytest.fixture(scope='session')
 def new_fixture():
     pass
+
