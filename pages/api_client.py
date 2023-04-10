@@ -18,6 +18,6 @@ class ApiClient:
         responce = requests.post(url=self.base_url + path, data=payload, params=None)
         if responce.ok:
             LOGGER.info(f"Post request. Status_code: {responce.raise_for_status()}, responce_body: {responce.content}")
-            return json.loads(responce.content)
+            return responce
         else:
             LOGGER.error(f"Status_code: {responce.raise_for_status()}, responce_body: {responce.content}")
