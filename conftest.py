@@ -43,3 +43,7 @@ def create_driver(get_config):
     yield driver
     driver.quit()
 
+
+@pytest.fixture(scope='session')
+def create_user():
+    return DataFaker().get_first_name(), DataFaker().get_last_name()
