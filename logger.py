@@ -8,3 +8,4 @@ LOGGER.addHandler(handler)
 
 
 #ДЛЯ 1 коммита в new branch
+# Для 2 коммита
