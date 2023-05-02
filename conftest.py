@@ -46,10 +46,10 @@ def create_driver(get_config):
 
 @pytest.fixture(scope='session')
 def create_user():
-    return DataFaker().get_first_name(), DataFaker()
+    return DataFaker().get_first_name(), DataFaker().get_last_name()
 
 
-@pytest.fixture(scope='session')
-def new_fixture():
-    pass
+
+
+
 
