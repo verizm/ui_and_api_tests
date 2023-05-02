@@ -32,10 +32,9 @@ def test_create_user(schema):
 @pytest.mark.usefixtures("login")
 class TestUser:
 
-
     def test_login(self):
+        """Example use fixture request.cls attribute."""
         print(self.login)
         print(self.password)
 
-    def test_print(self, printer):
-        pass
+
