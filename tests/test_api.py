@@ -28,4 +28,14 @@ def test_create_user(schema):
     assert body['name'] == payload['name']
 
 
+@pytest.mark.smoke
+@pytest.mark.usefixtures("login")
+class TestUser:
 
+
+    def test_login(self):
+        print(self.login)
+        print(self.password)
+
+    def test_print(self, printer):
+        pass

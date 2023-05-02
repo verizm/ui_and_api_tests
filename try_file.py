@@ -332,10 +332,6 @@ import json
 # assert person.to_json() == '{"name": "John", "age": 30}'
 # print('Good')
 
-s = [1,2,3,4, 5]
-z = [1,2,3,4,5]
-print(list(zip(s, z)))
-print(list((elem[0], elem[1]) for elem in zip(s, z) if elem[0] != elem[1]))
 
 
 

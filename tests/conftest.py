@@ -30,9 +30,23 @@ def register(request):
     return profile, token
 
 
+@pytest.fixture
+def login(request):
+    request.cls.login = "ajkajk"
+    request.cls.password = "qwerty"
+
+
+@pytest.fixture
+def printer(request):
+    print(request.node)
+    print(dir(request.node))
+    a = getattr(request.node, 'rep_call', None)
+    print(request.node.rep_call.failed)
+
+
 # __UI_FIXTURE__
 
-@pytest.fixture()
+@pytest.fixture
 def open_text_box_form(create_driver):
     UserCart(create_driver).get_page("https://demoqa.com/text-box")
 
